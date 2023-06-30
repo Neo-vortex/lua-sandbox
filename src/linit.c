@@ -52,7 +52,7 @@ static const luaL_Reg loadedlibs[] = {
   {LUA_DBLIBNAME, luaopen_debug},
   {NULL, NULL}
 };
-LUALIB_API void luaL_openlibs(lua_State* L, int fuse) {
+LUALIB_API void luaL_openlibs(lua_State* L, long fuse) {
   // Base library
   if (fuse == 0 || fuse % 2 == 1) {
     luaL_requiref(L, LUA_GNAME, luaopen_base, 1);
