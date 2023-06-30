@@ -6,7 +6,7 @@ This repo extend the lua language to be more friendly with different sandboxing 
 
 ## Library Fusion System
 
-In this repository, we have implemented a Library Fusion System, which allows you to selectively load specific Lua libraries based on a fusion value. The `luaL_openlibs` function has been modified to support this feature. Here's an example usage:
+In this repository, we have implemented a Library Fusion System, which allows you to selectively load specific Lua libraries based on a fusion value. The `luaL_openlibs` function has been modified to support this feature. Here's the way it is implemented:
 
 ```c
 #include "lua.h"
