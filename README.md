@@ -40,6 +40,8 @@ LUALIB_API void luaL_openlibs(lua_State* L, int fuse) {
   }
 }
 ```
+
+
 In this system, the fuse value determines which libraries are loaded. Each library is associated with a prime number, and if the fuse value is divisible by that prime number, the corresponding library is loaded.
 
 Fuse Number - Libraries Loaded
