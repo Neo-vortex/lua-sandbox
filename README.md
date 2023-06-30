@@ -1,14 +1,8 @@
-# Lua Repository
+# Lua-Sandbox Repository
 
 This repository contains the Lua programming language, an embeddable scripting language with a focus on simplicity and extensibility. Lua is commonly used as a lightweight scripting language in various domains, including game development, embedded systems, and scripting within larger applications.
+This repo extend the lua language to be more friendly with different sandboxing use cases.
 
-## Features
-
-- **Simplicity**: Lua is designed to be simple, lightweight, and easy to learn. Its clean and intuitive syntax allows developers to quickly write and understand Lua code.
-
-- **Embeddable**: Lua is designed to be embedded within larger applications, providing a powerful scripting language that can be seamlessly integrated into existing systems.
-
-- **Extensibility**: Lua provides mechanisms for extending its functionality with C/C++ code, allowing developers to create custom libraries and modules to enhance Lua's capabilities.
 
 ## Library Fusion System
 
