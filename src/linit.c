@@ -52,65 +52,63 @@ static const luaL_Reg loadedlibs[] = {
   {LUA_DBLIBNAME, luaopen_debug},
   {NULL, NULL}
 };
-
-
 LUALIB_API void luaL_openlibs(lua_State* L, int fuse) {
   // Base library
-  if (fuse & 1) {
+  if (fuse == 0 || fuse % 2 == 1) {
     luaL_requiref(L, LUA_GNAME, luaopen_base, 1);
     lua_pop(L, 1);
   }
 
   // Package library
-  if (fuse & 2) {
+  if (fuse % 3 == 0) {
     luaL_requiref(L, LUA_LOADLIBNAME, luaopen_package, 1);
     lua_pop(L, 1);
   }
 
   // Coroutine library
-  if (fuse & 4) {
+  if (fuse % 5 == 0) {
     luaL_requiref(L, LUA_COLIBNAME, luaopen_coroutine, 1);
     lua_pop(L, 1);
   }
 
   // Table library
-  if (fuse & 8) {
+  if (fuse % 7 == 0) {
     luaL_requiref(L, LUA_TABLIBNAME, luaopen_table, 1);
     lua_pop(L, 1);
   }
 
   // IO library
-  if (fuse & 16) {
+  if (fuse % 11 == 0) {
     luaL_requiref(L, LUA_IOLIBNAME, luaopen_io, 1);
     lua_pop(L, 1);
   }
 
   // OS library
-  if (fuse & 32) {
+  if (fuse % 13 == 0) {
     luaL_requiref(L, LUA_OSLIBNAME, luaopen_os, 1);
     lua_pop(L, 1);
   }
 
   // String library
-  if (fuse & 64) {
+  if (fuse % 17 == 0) {
     luaL_requiref(L, LUA_STRLIBNAME, luaopen_string, 1);
     lua_pop(L, 1);
   }
 
   // Math library
-  if (fuse & 128) {
+  if (fuse % 19 == 0) {
     luaL_requiref(L, LUA_MATHLIBNAME, luaopen_math, 1);
     lua_pop(L, 1);
   }
 
   // UTF8 library
-  if (fuse & 256) {
+  if (fuse % 23 == 0) {
     luaL_requiref(L, LUA_UTF8LIBNAME, luaopen_utf8, 1);
     lua_pop(L, 1);
   }
 
   // Debug library
-  if (fuse & 512) {
+  if (fuse % 29 == 0) {
     luaL_requiref(L, LUA_DBLIBNAME, luaopen_debug, 1);
     lua_pop(L, 1);
   }
