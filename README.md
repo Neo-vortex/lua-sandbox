@@ -4,9 +4,9 @@ This repository contains the Lua programming language, an embeddable scripting l
 This repo extend the lua language to be more friendly with different sandboxing use cases.
 
 
-## Library Fusion System
+## Library fusing System
 
-In this repository, we have implemented a Library Fusion System, which allows you to selectively load specific Lua libraries based on a fusion value. The `luaL_openlibs` function has been modified to support this feature. Here's the way it is implemented:
+In this repository, we have implemented a Library fusing System, which allows you to selectively load specific Lua libraries based on a fusion value. The `luaL_openlibs` function has been modified to support this feature. Here's the way it is implemented:
 
 ```c
 #include "lua.h"
