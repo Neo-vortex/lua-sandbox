@@ -39,37 +39,31 @@ LUALIB_API void luaL_openlibs(lua_State* L, int fuse) {
     lua_pop(L, 1);
   }
 }
+```
 In this system, the fuse value determines which libraries are loaded. Each library is associated with a prime number, and if the fuse value is divisible by that prime number, the corresponding library is loaded.
 
-Examples
-Here are a few examples of how you can use the Library Fusion System:
-
-To load only the Base library:
-
-c
-Copy code
-luaL_openlibs(L, 2);
-To load both the Base and String libraries:
-
-c
-Copy code
-luaL_openlibs(L, 34);
 Fuse Number - Libraries Loaded
 Here is a table showing the valid fuse numbers and the corresponding libraries loaded:
 
-Fuse Number	Libraries Loaded
-0	None
-2	Base
-3	Package
-5	Coroutine
-7	Table
-11	IO
-13	OS
-17	String
-19	Math
-23	UTF8
-29	Debug
-For any other fuse number, only the base library will be loaded.
+| Fuse Number | Libraries Loaded |
+|-------------|------------------|
+| 0           | None             |
+| 2           | Base             |
+| 3           | Package          |
+| 5           | Coroutine        |
+| 7           | Table            |
+| 11          | IO               |
+| 13          | OS               |
+| 17          | String           |
+| 19          | Math             |
+| 23          | UTF8             |
+| 29          | Debug            |
+
+
+Any combination of these would resut in custom lib loading.
+for example :
+
+fuse = 2*3 would load base and package lib
 
 Documentation
 For detailed documentation and guides on using Lua, please refer to the official Lua website: https://www.lua.org
