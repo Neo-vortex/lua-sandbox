@@ -62,7 +62,7 @@ Here is a table showing the valid fuse numbers and the corresponding libraries l
 | 29          | Debug            |
 
 
-Any combination of these would resut in custom lib loading.
+Any combination of these would result in custom lib loading.
 for example :
 
 fuse = 2*3 would load base and package lib
