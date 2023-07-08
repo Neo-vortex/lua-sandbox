@@ -64,6 +64,8 @@ fuse = 2*3 would load base and package lib
 Documentation
 For detailed documentation and guides on using Lua, please refer to the official Lua website: https://www.lua.org
 
+you can build lua as a library using the defualt `makefile`
+
 Contributions
 Contributions to the Lua repository are welcome! If you find any issues or have suggestions for improvements, please submit a pull request or open an issue on the repository. Your contributions will help enhance the
 
