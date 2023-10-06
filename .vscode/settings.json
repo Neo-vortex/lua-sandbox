@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "lualib.h": "c"
+    },
+    "C_Cpp.errorSquiggles": "disabled"
+}
